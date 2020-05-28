@@ -8,12 +8,15 @@
 <body>
 
     <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
+        <h1>Hello there!</h1>
+        <p><!--To get started, edit <code>src/index.js</code>.!--></p>
     </div>
-    <form action="GET">
-        <label for="searchMovies">Search </label>
-        <input type="text" name="search-movies" placeholder="Search Movies Here" id="searchMovies">
+    <form action="POST">
+        <label for="movie-title">Movie Title: </label>
+        <input type="text" name="movie-title" placeholder="Movie title" id="movie-title">
+        <label for="movie-rating">Rating: </label>
+        <input type="text" name="movie-rating" placeholder="Movie rating 1-5" id="movie-rating">
+        <button type="button">Submit</button>
     </form>
     <script src="./main.js"></script>
 </body>
