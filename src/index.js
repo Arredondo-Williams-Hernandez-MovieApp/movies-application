@@ -15,7 +15,19 @@ const {getMovies} = require('./api.js');
 
 //First requirement
 $(document).ready(function() {
-  alert('loading...');
+  //psuedo
+  //while text input val === 0, run 'loading...'
+  //on input populate html, using live search, keyup event
+  //while ()
+
+
+  console.log('loading...');
+
+
+
+
+
+
 
 });
 
