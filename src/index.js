@@ -30,6 +30,13 @@ $('button').click(function() {
     },
     body: JSON.stringify(moviePost),
   };
+  fetch(url,options).then((movies) => {
+    $('h1').html('Retrieving movies');
+    movies.forEach(({title, rating, id}) =>{
+      $('p').append(`id#${id} - ${title} - rating: ${rating} `);
+    });
+  })
+  })
 });
   getMovies().then((movies) => {
     $('h1').html('Here are all the movies:');
@@ -39,8 +46,6 @@ $('button').click(function() {
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
-  });
-
 
 });
 
