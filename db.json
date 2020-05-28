@@ -12,21 +12,21 @@
     },
     {
       "title": "John Wick",
-      "rating": "",
+      "rating": "4",
       "id": 3
     },
     {
-      "title": "",
-      "rating": "",
+      "title": "hello",
+      "rating": "3",
       "id": 4
     },
     {
-      "title": "matrix",
-      "rating": "4",
+      "title": "update me`",
+      "rating": "3",
       "id": 5
     },
     {
-      "title": "never ending story",
+      "title": "movie 5",
       "rating": "2",
       "id": 6
     }
