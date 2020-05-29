@@ -16,8 +16,8 @@ module.exports = {
       },
       body: JSON.stringify(moviePost),
     };
-    return fetch(url, options)
-        .then(response => response.json()).append(`id#${id} - ${title} - rating: ${rating} `);
+     return fetch(url, options)
+        .then(response => response.json());
   }
   // addMovie: () => {
   //   return fetch('/api/movies', {

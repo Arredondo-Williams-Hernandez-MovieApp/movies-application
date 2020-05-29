@@ -23,7 +23,7 @@ $(document).ready(function() {
     var movieList = '';
     $('h1').html('Here are all the movies:');
     movies.forEach(({title, rating, id}) => {
-      movieList += $('p').append(`id#${id} - ${title} - rating: ${rating} `);
+      movieList += $('.container').append(`id#${id} - ${title} - rating: ${rating}`);
     });
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -39,10 +39,7 @@ $('button').click(function() {
     $('p').append({title: $('#movie-title').val(), rating: $('#movie-rating').val()})
       getMovies().then((movies) => {
           $('h1').html('Here are all the movies:');
-          movies.forEach(({title, rating, id}) => {
-              $('p').html(`id#${id} - ${title} - rating: ${rating}`);
-                  //.append(`<div class="movies">id#${id} - ${title} - rating: ${rating} </div>`);
-          });
+              $('.container').append(` id#${movies[movies.length-1].id} - ${movies[movies.length-1].title} - rating: ${movies[movies.length-1].rating}`);
       }).catch((error) => {
           alert('Oh no! Something went wrong.\nCheck the console for details.');
           console.log(error);
