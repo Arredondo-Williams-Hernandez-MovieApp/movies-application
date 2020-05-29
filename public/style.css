@@ -8,3 +8,9 @@ html, body {
     transform: translateY(-100%);
     text-align: center;
 }
+
+.edit-fields{
+    height: 100px;
+    width: 100vh;
+    display: inline-block;
+}
