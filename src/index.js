@@ -11,7 +11,7 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies} = require('./api.js');
+const {getMovies, addMovie} = require('./api.js');
 
 //First requirement
 $(document).ready(function() {
@@ -20,8 +20,8 @@ $(document).ready(function() {
   //on input populate html, using live search, keyup event
 //
    getMovies().then((movies) => {
-    $('h1').html('Here are all the movies:');
     var movieList = '';
+    $('h1').html('Here are all the movies:');
     movies.forEach(({title, rating, id}) => {
       movieList += $('p').append(`id#${id} - ${title} - rating: ${rating} `);
     });
@@ -31,22 +31,24 @@ $(document).ready(function() {
   });
 
 
+
 $('button').click(function() {
   $('h1').html('Loading...');
-      $.post('/api/movies', {
-        "title": $('#movie-title').val(),
-        "rating": $('#movie-rating').val()
-      });
-      addMovie().then(getMovies().then((movies) => {
+  //let movieList = '';
+      addMovie();
+    $('p').append({title: $('#movie-title').val(), rating: $('#movie-rating').val()})
+      getMovies().then((movies) => {
           $('h1').html('Here are all the movies:');
           movies.forEach(({title, rating, id}) => {
-              $('p').html(movieList);
+              $('p').html(`id#${id} - ${title} - rating: ${rating}`);
+                  //.append(`<div class="movies">id#${id} - ${title} - rating: ${rating} </div>`);
           });
       }).catch((error) => {
           alert('Oh no! Something went wrong.\nCheck the console for details.');
           console.log(error);
-      }));
+      });
 });
+
   // $.ajax('/api/movies').done(function (data) {
   //   $('#loading').text(`Here are all the movies:`);
   //   data.forEach(({title, rating}) => {
