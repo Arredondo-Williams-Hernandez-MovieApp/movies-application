@@ -16,24 +16,29 @@
       "id": 3
     },
     {
-      "title": "addmovie",
+      "title": "Mary Poppins",
       "rating": "3",
       "id": 4
     },
     {
-      "title": "movie1",
-      "rating": "3",
+      "title": "Lion King",
+      "rating": "4",
       "id": 5
     },
     {
-      "title": "movie",
-      "rating": "123",
+      "title": "Aladdin",
+      "rating": "4",
       "id": 6
     },
     {
-      "title": "Harry Potter",
-      "rating": "6",
+      "title": "Little Mermaid",
+      "rating": "4",
       "id": 7
+    },
+    {
+      "title": "Fox and the Hound",
+      "rating": "5",
+      "id": 8
     }
   ]
 }

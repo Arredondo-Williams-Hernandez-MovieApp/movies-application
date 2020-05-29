@@ -7,32 +7,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-
+<form action="POST">Add
+    <label for="movie-title">Movie Title: </label>
+    <input type="text" name="movie-title" placeholder="Movie title" id="movie-title">
+    <label for="movie-rating">Rating: </label>
+    <input type="text" name="movie-rating" placeholder="Movie rating 1-5" id="movie-rating">
+    <button type="button">Submit</button>
+</form>
+<form action="">Edit Movie
+    <label for="edit-movie">: </label>
+    <select name="movie" id="edit-movie">Select a movie to edit: </select>
+</form>
+<form action="">Delete
+    <label for="movie-title-delete">Movie Title: </label>
+    <input type="text" name="movie-title-delete" placeholder="Movie title" id="movie-title-delete">
+    <label for="movie-rating-delete">Rating: </label>
+    <input type="text" name="movie-rating-delete" placeholder="Movie rating 1-5" id="movie-rating-delete">
+    <button type="button">Submit</button>
+</form>
     <div class="container">
         <h1>Hello there!</h1>
-        <p><!--To get started, edit <code>src/index.js</code>.!--></p>
+        <div class="movies"></div>
     </div>
-    <form action="POST">Add
-        <label for="movie-title">Movie Title: </label>
-        <input type="text" name="movie-title" placeholder="Movie title" id="movie-title">
-        <label for="movie-rating">Rating: </label>
-        <input type="text" name="movie-rating" placeholder="Movie rating 1-5" id="movie-rating">
-        <button type="button">Submit</button>
-    </form>
-    <form action="">Edit
-        <label for="movie-title-edit">Movie Title: </label>
-        <input type="text" name="movie-title-edit" placeholder="Movie title" id="movie-title-edit">
-        <label for="movie-rating-edit">Rating: </label>
-        <input type="text" name="movie-rating-edit" placeholder="Movie rating 1-5" id="movie-rating-edit">
-        <button type="button">Submit</button>
-    </form>
-    <form action="">Delete
-        <label for="movie-title-delete">Movie Title: </label>
-        <input type="text" name="movie-title-delete" placeholder="Movie title" id="movie-title-delete">
-        <label for="movie-rating-delete">Rating: </label>
-        <input type="text" name="movie-rating-delete" placeholder="Movie rating 1-5" id="movie-rating-delete">
-        <button type="button">Submit</button>
-    </form>
+
     <script src="./main.js"></script>
 </body>
 </html>
