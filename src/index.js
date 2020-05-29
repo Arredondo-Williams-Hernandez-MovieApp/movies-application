@@ -11,7 +11,7 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies, addMovie} = require('./api.js');
+const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 //First requirement
 $(document).ready(function() {
@@ -19,13 +19,20 @@ $(document).ready(function() {
     var movieList = '';
     $('h1').html('Here are all the movies:');
     movies.forEach(({title, rating}) => {
-      movieList += $('.movies').append(`<div class="movieObject">${title} - rating: ${rating}</div>`);
+      movieList += $('.movies').append(`<div class="movieObject">${title} - rating: ${rating}</div><button>DELETE</button>`);
         $('#edit-movie').append(`<option>${title} - rating: ${rating}</option>`)});
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
   });
 
+//edit
+
+    //console.log($('#edit-movie option:selected').val());
+
+    $('#edit-movie').change(function(e){
+            console.log(e.target.value);
+    });
 
 // button functionality to add a movie
     $('button').click(function() {

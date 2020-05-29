@@ -18,5 +18,32 @@ module.exports = {
     };
      return fetch(url, options)
         .then(response => response.json());
-  }
+  },
+
+  editMovie: () => {
+    const url = '/api/movies/$(#edit-movie)';//from a selector
+    const options = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        //user change input in input field, change on button submit
+      }),
+    };
+    return fetch(url, options)
+        .then(response => response.json());
+  },
+
+//   deleteMovie: () => {
+//     const url = '/api/movies';
+//     const options = {
+//       method: 'DELETE',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(updatedMovie),
+//     };
+//     return fetch(url, options)
+//         .then(response => response.json());
 };
