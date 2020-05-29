@@ -16,24 +16,29 @@
       "id": 3
     },
     {
-      "title": "Next",
-      "rating": "1",
+      "title": "Mary Poppins",
+      "rating": "3",
       "id": 4
     },
     {
-      "title": "Next 2",
-      "rating": "2",
+      "title": "Lion King",
+      "rating": "4",
       "id": 5
     },
     {
-      "title": "Next 8",
-      "rating": "8",
+      "title": "Aladdin",
+      "rating": "4",
       "id": 6
     },
     {
-      "title": "Get",
-      "rating": "1",
+      "title": "Little Mermaid",
+      "rating": "4",
       "id": 7
+    },
+    {
+      "title": "Fox and the Hound",
+      "rating": "5",
+      "id": 8
     }
   ]
 }
