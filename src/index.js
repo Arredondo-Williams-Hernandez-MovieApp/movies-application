@@ -30,23 +30,24 @@ $(document).ready(function() {
     console.log(error);
   });
 
+    console.log(addMovie());
 
-$('button').click(function() {
-  $('h1').html('Loading...');
-      $.post('/api/movies', {
-        "title": $('#movie-title').val(),
-        "rating": $('#movie-rating').val()
-      });
-      addMovie().then(getMovies().then((movies) => {
-          $('h1').html('Here are all the movies:');
-          movies.forEach(({title, rating, id}) => {
-              $('p').html(movieList);
-          });
-      }).catch((error) => {
-          alert('Oh no! Something went wrong.\nCheck the console for details.');
-          console.log(error);
-      }));
-});
+// $('button').click(function() {
+//   $('h1').html('Loading...');
+//       $.post('/api/movies', {
+//         "title": $('#movie-title').val(),
+//         "rating": $('#movie-rating').val()
+//       });
+//       addMovie().then(getMovies().then((movies) => {
+//           $('h1').html('Here are all the movies:');
+//           movies.forEach(({title, rating, id}) => {
+//               $('p').html(movieList);
+//           });
+//       }).catch((error) => {
+//           alert('Oh no! Something went wrong.\nCheck the console for details.');
+//           console.log(error);
+//       }));
+// });
   // $.ajax('/api/movies').done(function (data) {
   //   $('#loading').text(`Here are all the movies:`);
   //   data.forEach(({title, rating}) => {
