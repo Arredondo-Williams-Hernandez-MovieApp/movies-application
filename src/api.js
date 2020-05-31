@@ -35,6 +35,7 @@ module.exports = {
   },
 
 //   deleteMovie: () => {
+//      const movieDelete =
 //     const url = '/api/movies';
 //     const options = {
 //       method: 'DELETE',
