@@ -24,6 +24,21 @@
       "title": "Men in Black",
       "rating": "4",
       "id": 5
+    },
+    {
+      "title": "Shrek",
+      "rating": "4",
+      "id": 6
+    },
+    {
+      "title": "Shrek 2",
+      "rating": "5",
+      "id": 7
+    },
+    {
+      "title": "Wreck it Ralph",
+      "rating": "3",
+      "id": 8
     }
   ]
 }

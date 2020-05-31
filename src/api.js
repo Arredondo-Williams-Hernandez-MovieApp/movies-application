@@ -21,15 +21,14 @@ module.exports = {
   },
 
   editMovie: () => {
-    const url = '/api/movies/$(#edit-movie)';//from a selector
+    const movieEdit = {title: $('#edit-title').val(), rating: $('#edit-rating').val()};
+    const url = '/api/movies/' + $(e.target).data('id');//from a selector
     const options = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        //user change input in input field, change on button submit
-      }),
+      body: JSON.stringify({movieEdit}),
     };
     return fetch(url, options)
         .then(response => response.json());
