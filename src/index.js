@@ -12,7 +12,7 @@ const $ = require('jquery');
 const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 // Render Movies function
-
+// could use .reduce() method to create HTML string
 function renderMovies(movies) {
     var movieList = '';
     $('h1').html('Here are all the movies:');
@@ -47,7 +47,8 @@ $(document).ready(function () {
 
     // Delete Movie
     $('.movies').on('click', 'button.delete', function (e) {
-        $('.loading-gif').html(`<img src="./img/loading-gif.gif" alt="intermission cartoon">`);
+        // $('.loading-gif').html(`<img src="./img/loading-gif.gif" alt="intermission cartoon">`);
+        $('h1').html(`<div class="area"><div class="mover"></div></div>`);
         movieID = $(e.target).data('id');
         deleteMovie(movieID);
         getMovies().then(renderMovies)
@@ -55,7 +56,7 @@ $(document).ready(function () {
 
     // Send edit to fetch.
     $('.edit-button').click(function(){
-       $('h1').html('Loading...');
+        $('h1').html(`<div class="area"><div class="mover"></div></div>`);
        let title = $('#movie-title-edit').val();
        let rating = $('#movie-rating-edit').val();
        editMovie(title, rating, movieID);

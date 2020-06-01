@@ -34,18 +34,6 @@ module.exports = {
         .then(response => response.json());
   },
 
-//   deleteMovie: () => {
-//      const movieDelete =
-//     const url = '/api/movies';
-//     const options = {
-//       method: 'DELETE',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(updatedMovie),
-//     };
-//     return fetch(url, options)
-//         .then(response => response.json());
   deleteMovie: (movieID) => {
     const url = `/api/movies/${movieID}`;
     const options = {
