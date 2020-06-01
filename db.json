@@ -1,29 +1,19 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
+      "title": "Casa De Mi Padre",
       "rating": "4",
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
+      "title": "Star Wars: Phantom Menace",
       "rating": "5",
       "id": 2
-    },
-    {
-      "title": "John Wick",
-      "rating": "4",
-      "id": 3
     },
     {
       "title": "Lion King",
       "rating": "5",
       "id": 4
-    },
-    {
-      "title": "Men in Black",
-      "rating": "4",
-      "id": 5
     },
     {
       "title": "Shrek",
@@ -39,6 +29,11 @@
       "title": "Wreck it Ralph",
       "rating": "3",
       "id": 8
+    },
+    {
+      "title": "John Wick",
+      "rating": "3",
+      "id": 9
     }
   ]
 }

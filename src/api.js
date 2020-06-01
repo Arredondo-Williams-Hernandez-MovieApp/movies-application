@@ -20,15 +20,15 @@ module.exports = {
         .then(response => response.json());
   },
 
-  editMovie: () => {
-    const movieEdit = {title: $('#edit-title').val(), rating: $('#edit-rating').val()};
-    const url = '/api/movies/' + $(e.target).data('id');//from a selector
+  editMovie: (title, rating, movieID) => {
+    const movieEdit = {title, rating};
+    const url = `/api/movies/${movieID}`;//from a selector
     const options = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({movieEdit}),
+      body: JSON.stringify(movieEdit),
     };
     return fetch(url, options)
         .then(response => response.json());
@@ -46,4 +46,16 @@ module.exports = {
 //     };
 //     return fetch(url, options)
 //         .then(response => response.json());
+  deleteMovie: (movieID) => {
+    const url = `/api/movies/${movieID}`;
+    const options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    return fetch(url, options)
+        .then(response => response.json());
+  }
+
 };
