@@ -30,7 +30,7 @@ function renderMovies(movies) {
 $(document).ready(function () {
     getMovies().then((renderMovies)
     ).catch((error) => {
-        alert('Oh no! Something went wrong.\nCheck the console for details.');
+        //alert('Oh no! Something went wrong.\nCheck the console for details.');
         console.log(error);
     });
 
@@ -64,7 +64,8 @@ $(document).ready(function () {
 
 // button functionality to add a movie
     $('.add-button').click(function () {
-        $('h1').html('Loading...');
+        // $('h1').html('Loading...');
+        $('h1').html(`<div class="area"><div class="mover"></div></div>`);
         addMovie();
         $('p').append({title: $('#movie-title').val(), rating: $('#movie-rating').val()});
         getMovies().then(renderMovies)

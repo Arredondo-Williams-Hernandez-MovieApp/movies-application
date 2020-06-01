@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
-    background-color: darkred;
+    /*background-color: darkred;*/
+    background-image: linear-gradient(to top right, red, #f06d06, darkgoldenrod);
 }
 
 /*.container {*/
@@ -35,4 +36,28 @@ ul{
 
 .movie-container {
     padding: 1em;
+}
+
+.mover {
+    width: 50px;
+    height: 50px;
+    backgorund: #f06d06;
+    border-radius: 50%;
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    20%, 100% {
+        opacity: 0;
+        transform: translate(200px, 0);
+    }
+
+}
+
+.area {
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid blue;
+    border-radius: 50px;
 }
