@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     // Delete Movie
     $('.movies').on('click', 'button.delete', function (e) {
-        $('h1').html("Loading...");
+        $('.loading-gif').html(`<img src="./img/loading-gif.gif" alt="intermission cartoon">`);
         movieID = $(e.target).data('id');
         deleteMovie(movieID);
         getMovies().then(renderMovies)
