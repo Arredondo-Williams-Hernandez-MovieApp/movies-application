@@ -3,11 +3,9 @@ const $ = require('jquery');
 /**
  * es6 modules and imports
  */
-import sayHello from './hello';
-
-sayHello('World');
-
-
+// import sayHello from './hello';
+//
+// sayHello('World');
 /**
  * require style imports
  */
@@ -45,9 +43,16 @@ $(document).ready(function () {
        console.log(movieID, title, rating);
        $('#movie-title-edit').val(title);
         $('#movie-rating-edit').val(rating);
-
-
     });
+
+    // Delete Movie
+    $('.movies').on('click', 'button.delete', function (e) {
+        $('h1').html("Loading...");
+        movieID = $(e.target).data('id');
+        deleteMovie(movieID);
+        getMovies().then(renderMovies)
+    });
+
     // Send edit to fetch.
     $('.edit-button').click(function(){
        $('h1').html('Loading...');
@@ -62,24 +67,7 @@ $(document).ready(function () {
         $('h1').html('Loading...');
         addMovie();
         $('p').append({title: $('#movie-title').val(), rating: $('#movie-rating').val()});
-        getMovies().then((movies) => {
-            $('h1').html('Here are all the movies:');
-            $('.movies').append(`<li class="movieObject p-3"> ${movies[movies.length-1].title} - rating: ${movies[movies.length-1].rating}</li>
-<button data-id="${movies[movies.length-1].id}" data-title="${movies[movies.length-1].title}" data-rating="${movies[movies.length-1].rating}" class="delete btn btn-primary" type="button">DELETE</button>
-                    <button data-id="${movies[movies.length-1].id}" data-title="${movies[movies.length-1].title}" data-rating="${movies[movies.length-1].rating}" type="button" class="edit btn btn-primary">EDIT</button>`);
-            $('#edit-movie').append(`<option>${movies[movies.length-1].title} - rating: ${movies[movies.length-1].rating}</option>`);
-        }).catch((error) => {
-            alert('Oh no! Something went wrong.\nCheck the console for details.');
-            console.log(error);
+        getMovies().then(renderMovies)
         });
-    });
-
-
 });
-
-
-// console log the event target: e.target
-// console log the event target with jquery:  $(e.target)
-// add a data attribute for the id on the buttons (<button data-id=${id}></button>)
-// console.log the value of the data attribute when you click the button: $(e.target).data('id')
 
