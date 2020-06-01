@@ -17,9 +17,9 @@ function renderMovies(movies) {
     var movieList = '';
     $('h1').html('Here are all the movies:');
     movies.forEach(({id, title, rating}) => {
-        movieList += (`<li class="movieObject p-3">${title} - rating: ${rating}
+        movieList += (`<div class="movie-container"><li class="movieObject p-3">${title} - rating: ${rating}
        </li><button data-id="${id}" data-title="${title}" data-rating="${rating}" class="delete btn btn-primary" type="button">DELETE</button>
-       <button data-id="${id}" data-title="${title}" data-rating="${rating}" class="edit btn btn-primary" type="button">EDIT</button>`);
+       <button data-id="${id}" data-title="${title}" data-rating="${rating}" class="edit btn btn-primary" type="button">EDIT</button></div>`);
     });
     $('.movies').html(movieList)
 }
