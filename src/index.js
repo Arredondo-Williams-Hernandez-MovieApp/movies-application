@@ -15,7 +15,7 @@ const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 // could use .reduce() method to create HTML string
 function renderMovies(movies) {
     var movieList = '';
-    $('h1').html('Here are all the movies:');
+    $('h1').html('Here are all your movies:');
     movies.forEach(({id, title, rating}) => {
         movieList += (`<div class="movie-container"><li class="movieObject p-3">${title} - rating: ${rating}
        </li><button data-id="${id}" data-title="${title}" data-rating="${rating}" class="delete btn btn-primary" type="button">DELETE</button>

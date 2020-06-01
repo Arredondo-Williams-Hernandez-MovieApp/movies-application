@@ -1,25 +1,24 @@
 html, body {
     height: 100%;
     /*background-color: darkred;*/
-    background-image: linear-gradient(to top right, red, #f06d06, darkgoldenrod);
+    /*background-image: linear-gradient(to top right, red, #f06d06, darkgoldenrod);*/
+    background-image: url("img/Film Strip Background  01_preview1.jpeg");
+    background-size: cover;
 }
 
-/*.container {*/
-/*    position: relative;*/
-/*    top: 50%;*/
-/*    transform: translateY(-100%);*/
-/*    text-align: center;*/
-/*}*/
-
 .movieList {
-    height: 500px;
+    height: 550px;
     width: 300px;
-    border: 2px solid black
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.8)
 }
 
 h1 {
     text-align: center;
     margin-bottom: 2em;
+    background-color: black;
+    color: goldenrod;
+    width: 100%;
 }
 
 ul{
@@ -36,6 +35,7 @@ ul{
 
 .movie-container {
     padding: 1em;
+    color: white
 }
 
 .mover {
@@ -60,4 +60,14 @@ ul{
     margin: 0 auto;
     border: 2px solid blue;
     border-radius: 50px;
+}
+
+h3 {
+    color: white;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
+    color: white;
 }
